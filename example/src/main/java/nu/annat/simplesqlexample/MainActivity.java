@@ -7,14 +7,17 @@ import android.view.View;
 
 import java.sql.Types;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import nu.annat.simplesql.android.simplesql.DataHelper;
 import nu.annat.simplesql.android.simplesql.MappedParameters;
+import nu.annat.simplesql.android.simplesql.NamedStatement;
 import nu.annat.simplesql.android.simplesql.sqlite.SqliteHelperConnection;
 
 public class MainActivity extends AppCompatActivity {
 
     private DataHelper dh;
+    private NamedStatement namedStatement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,23 @@ public class MainActivity extends AppCompatActivity {
 
         List<Message> messages = dh.queryList("Select * from messages order by timestamp DESC", new MessageMapper(), null);
         for (Message message : messages) {
+            Log.d("message", message.toString());
+        }
+
+
+        // Auto mapping requires an empty constructor and set methods for all values.
+        List<Message> autpMappedMessageList = dh.queryArrayListAuto("Select * from messages order by timestamp DESC", Message.class, null);
+        for (Message message : autpMappedMessageList) {
+            Log.d("message", message.toString());
+        }
+
+        // you can also prepare a statement with or without named parameters for later reuse.
+        // internally this uses the databases preparedStatements and can be optimized by the database engine
+        namedStatement = dh.getNamedStatement("Select * from messages where timestamp>:timestamp order by timestamp DESC");
+        MappedParameters parameters = new MappedParameters();
+        parameters.add("timestamp", System.currentTimeMillis()* TimeUnit.MINUTES.toMillis(-1), Types.BIGINT);
+        List<Message> preparedMessageList = dh.queryList(namedStatement, new MessageMapper(), parameters);
+        for (Message message : preparedMessageList) {
             Log.d("message", message.toString());
         }
 
