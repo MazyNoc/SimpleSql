@@ -1,7 +1,9 @@
-package nu.annat.simplesql;
+package nu.annat.simplesql.android.simplesql;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import nu.annat.simplesql.BuildConfig;
 
 public class HelperColumnMapping extends ArrayList<HelperColumnMapping.ColumnMap> {
 

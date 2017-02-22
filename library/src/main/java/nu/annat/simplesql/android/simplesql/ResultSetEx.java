@@ -1,4 +1,4 @@
-package nu.annat.simplesql;
+package nu.annat.simplesql.android.simplesql;
 
 import java.io.InputStream;
 import java.io.Reader;

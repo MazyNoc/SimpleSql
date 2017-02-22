@@ -1,11 +1,11 @@
-package nu.annat.simplesql.sqlite;
+package nu.annat.simplesql.android.simplesql.sqlite;
 
 import android.database.sqlite.SQLiteDatabase;
 
 import java.sql.SQLException;
 
-import nu.annat.simplesql.HelperConnection;
-import nu.annat.simplesql.HelperStatement;
+import nu.annat.simplesql.android.simplesql.HelperConnection;
+import nu.annat.simplesql.android.simplesql.HelperStatement;
 
 public class SqliteHelperConnection implements HelperConnection {
 

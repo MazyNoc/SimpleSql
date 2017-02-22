@@ -1,6 +1,8 @@
-package nu.annat.simplesql;
+package nu.annat.simplesql.android.simplesql;
 
 import java.sql.SQLException;
+
+import nu.annat.simplesql.BuildConfig;
 
 public abstract class ObjectMapper<T> {
 

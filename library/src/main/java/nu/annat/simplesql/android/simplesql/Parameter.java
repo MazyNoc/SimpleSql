@@ -1,4 +1,4 @@
-package nu.annat.simplesql;
+package nu.annat.simplesql.android.simplesql;
 
 
 public class Parameter {
