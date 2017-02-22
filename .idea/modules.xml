@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SimpleSql.iml" filepath="$PROJECT_DIR$/SimpleSql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/simplesqlexample.iml" filepath="$PROJECT_DIR$/example/simplesqlexample.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>

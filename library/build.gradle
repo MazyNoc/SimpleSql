@@ -1,4 +1,19 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+def bintrayUser = ""
+def bintrayKey = ""
+try {
+    bintrayUser = project.property("bintray.user")
+    bintrayKey = project.property("bintray.key")
+    println bintrayUser
+    println bintrayKey
+
+} catch (Exception ignore) {
+    println "Missing release keystore passwords, add the keys \"bintray.user\" and \"bintray.key\" to your gradle.properties file"
+}
+
 
 android {
     compileSdkVersion 25
@@ -29,16 +44,16 @@ dependencies {
 
 
 
-def siteUrl = 'https://github.com/MazyNoc/beholder-lib'    // Homepage URL of the library
-def gitUrl = 'https://github.com/MazyNoc/beholder-lib.git' // Git repository URL
+def siteUrl = 'https://github.com/MazyNoc/SimpleSql'    // Homepage URL of the library
+def gitUrl = 'https://github.com/MazyNoc/SimpleSql.git' // Git repository URL
 group = "nu.annat.android"                               // Maven Group ID for the artifact
-version = niceVersion
+version = rootProject.ext.niceVersion
 
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
         pom {
-            artifactId = "library"
+            artifactId = "simplesql"
             project {
                 packaging 'aar'
 
@@ -87,7 +102,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "beholder"
+        name = "simplesql"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

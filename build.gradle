@@ -25,3 +25,25 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+
+import org.ajoberstar.gradle.git.tasks.GitPush
+import org.ajoberstar.gradle.git.tasks.GitTag
+
+ext {
+    niceVersion = "1.0.0"
+}
+
+task createTag(type: GitTag) {
+    repoPath = rootDir
+    tagName = rootProject.ext.niceVersion
+    message = "Application release ${project.version.toString()}"
+}
+
+task pushTag(type: GitPush, dependsOn: createTag) {
+    namesOrSpecs = [rootProject.ext.niceVersion]
+}
+
+task fullRelease(dependsOn: ['pushTag', ':library:bintrayUpload']) {
+}
