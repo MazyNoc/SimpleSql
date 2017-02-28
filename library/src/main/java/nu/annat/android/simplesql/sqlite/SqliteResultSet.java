@@ -1,4 +1,4 @@
-package nu.annat.simplesql.android.simplesql.sqlite;
+package nu.annat.android.simplesql.sqlite;
 
 import android.database.Cursor;
 
@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import nu.annat.simplesql.android.simplesql.HelperColumnMapping;
-import nu.annat.simplesql.android.simplesql.HelperColumnMapping.ColumnMap;
-import nu.annat.simplesql.android.simplesql.HelperResultSet;
+import nu.annat.android.simplesql.HelperColumnMapping;
+import nu.annat.android.simplesql.HelperColumnMapping.ColumnMap;
+import nu.annat.android.simplesql.HelperResultSet;
 
 /**
  * Sql lite implementation of the HelperResultSet.

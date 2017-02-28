@@ -1,4 +1,4 @@
-package nu.annat.simplesql.android.simplesql;
+package nu.annat.android.simplesql;
 
 import java.util.ArrayList;
 import java.util.HashMap;

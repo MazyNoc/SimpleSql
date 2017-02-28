@@ -1,8 +1,8 @@
-package nu.annat.simplesql.android.simplesql;
+package nu.annat.android.simplesql;
 
 import java.sql.SQLException;
 
-public abstract class PlainMapper {
+public abstract class RawMapper {
 	private boolean stopped=false;
 
 	public boolean isStopped() {
@@ -13,10 +13,10 @@ public abstract class PlainMapper {
 	}
 	
 	public void init(HelperResultSet rs) throws SQLException{};
-	
+
 	public void doRow(HelperResultSet rs) throws SQLException{
 		row(rs);
 	}
 	public abstract void row(HelperResultSet rs) throws SQLException;
-
+	
 }
