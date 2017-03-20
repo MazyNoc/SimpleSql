@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/example" />
+            <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/simplesql" />
+            <option value="$PROJECT_DIR$/sqliteandroid" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

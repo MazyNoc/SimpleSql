@@ -1,1 +1,1 @@
-include ':simplesql', ':example'
+include ':simplesql', ':example', ':sqliteandroid', ':lib'

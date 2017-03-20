@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.4.0-alpha1'
 
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
@@ -32,7 +32,7 @@ import org.ajoberstar.gradle.git.tasks.GitPush
 import org.ajoberstar.gradle.git.tasks.GitTag
 
 ext {
-    niceVersion = "1.0.6"
+    niceVersion = "1.0.9"
 }
 
 task createTag(type: GitTag) {

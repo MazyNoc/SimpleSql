@@ -9,10 +9,11 @@ import java.sql.Types;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import nu.annat.android.simplesql.DataHelper;
-import nu.annat.android.simplesql.MappedParameters;
-import nu.annat.android.simplesql.NamedStatement;
-import nu.annat.android.simplesql.sqlite.SqliteHelperConnection;
+import nu.annat.simplesql.DataHelper;
+import nu.annat.simplesql.MappedParameters;
+import nu.annat.simplesql.NamedStatement;
+import nu.annat.simplesql.sqliteandroid.SqliteHelperConnection;
+
 
 public class MainActivity extends AppCompatActivity {
 

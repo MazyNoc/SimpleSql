@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SimpleSql.iml" filepath="$PROJECT_DIR$/SimpleSql.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplesql/simplesql.iml" filepath="$PROJECT_DIR$/simplesql/simplesql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqliteandroid/sqliteandroid.iml" filepath="$PROJECT_DIR$/sqliteandroid/sqliteandroid.iml" />
     </modules>
   </component>
 </project>

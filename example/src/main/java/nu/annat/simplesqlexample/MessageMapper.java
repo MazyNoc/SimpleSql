@@ -2,9 +2,9 @@ package nu.annat.simplesqlexample;
 
 import java.sql.SQLException;
 
-import nu.annat.android.simplesql.HelperColumnMapping;
-import nu.annat.android.simplesql.HelperResultSet;
-import nu.annat.android.simplesql.ObjectMapper;
+import nu.annat.simplesql.HelperColumnMapping;
+import nu.annat.simplesql.HelperResultSet;
+import nu.annat.simplesql.ObjectMapper;
 
 public class MessageMapper extends ObjectMapper<Message> {
 
